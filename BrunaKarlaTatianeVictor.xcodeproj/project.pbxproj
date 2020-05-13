@@ -24,7 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		16B94F15245C353600D17120 /* ControlaImposto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControlaImposto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16B94F15245C353600D17120 /* BrunaKarlaTatianeVictor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrunaKarlaTatianeVictor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16B94F18245C353600D17120 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16B94F1A245C353600D17120 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		16B94F1F245C353600D17120 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		16B94F0C245C353600D17120 = {
 			isa = PBXGroup;
 			children = (
-				16B94F17245C353600D17120 /* ControlaImposto */,
+				16B94F17245C353600D17120 /* ComprasUSA */,
 				16B94F16245C353600D17120 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,12 +64,12 @@
 		16B94F16245C353600D17120 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				16B94F15245C353600D17120 /* ControlaImposto.app */,
+				16B94F15245C353600D17120 /* BrunaKarlaTatianeVictor.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		16B94F17245C353600D17120 /* ControlaImposto */ = {
+		16B94F17245C353600D17120 /* ComprasUSA */ = {
 			isa = PBXGroup;
 			children = (
 				16B94F18245C353600D17120 /* AppDelegate.swift */,
@@ -88,15 +88,15 @@
 				16B94F29245C353B00D17120 /* Info.plist */,
 				16B94FB92469B98800D17120 /* ShoppingLib.xcdatamodeld */,
 			);
-			path = ControlaImposto;
+			path = ComprasUSA;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		16B94F14245C353600D17120 /* ControlaImposto */ = {
+		16B94F14245C353600D17120 /* BrunaKarlaTatianeVictor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 16B94F2C245C353B00D17120 /* Build configuration list for PBXNativeTarget "ControlaImposto" */;
+			buildConfigurationList = 16B94F2C245C353B00D17120 /* Build configuration list for PBXNativeTarget "BrunaKarlaTatianeVictor" */;
 			buildPhases = (
 				16B94F11245C353600D17120 /* Sources */,
 				16B94F12245C353600D17120 /* Frameworks */,
@@ -106,9 +106,9 @@
 			);
 			dependencies = (
 			);
-			name = ControlaImposto;
+			name = BrunaKarlaTatianeVictor;
 			productName = ControlaImposto;
-			productReference = 16B94F15245C353600D17120 /* ControlaImposto.app */;
+			productReference = 16B94F15245C353600D17120 /* BrunaKarlaTatianeVictor.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -126,7 +126,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 16B94F10245C353600D17120 /* Build configuration list for PBXProject "ControlaImposto" */;
+			buildConfigurationList = 16B94F10245C353600D17120 /* Build configuration list for PBXProject "BrunaKarlaTatianeVictor" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -139,7 +139,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				16B94F14245C353600D17120 /* ControlaImposto */,
+				16B94F14245C353600D17120 /* BrunaKarlaTatianeVictor */,
 			);
 		};
 /* End PBXProject section */
@@ -317,12 +317,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ControlaImposto/Info.plist;
+				INFOPLIST_FILE = ComprasUSA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.benekar.ControlaImposto;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.benekar.ComprasUSA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -334,12 +334,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ControlaImposto/Info.plist;
+				INFOPLIST_FILE = ComprasUSA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.benekar.ControlaImposto;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.benekar.ComprasUSA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -349,7 +349,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		16B94F10245C353600D17120 /* Build configuration list for PBXProject "ControlaImposto" */ = {
+		16B94F10245C353600D17120 /* Build configuration list for PBXProject "BrunaKarlaTatianeVictor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				16B94F2A245C353B00D17120 /* Debug */,
@@ -358,7 +358,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		16B94F2C245C353B00D17120 /* Build configuration list for PBXNativeTarget "ControlaImposto" */ = {
+		16B94F2C245C353B00D17120 /* Build configuration list for PBXNativeTarget "BrunaKarlaTatianeVictor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				16B94F2D245C353B00D17120 /* Debug */,

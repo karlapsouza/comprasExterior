@@ -27,4 +27,9 @@ class ProductViewController: UIViewController {
     @IBAction func addProduct(_ sender: Any) {
     }
     
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
 }

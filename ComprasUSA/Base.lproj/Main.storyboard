@@ -10,7 +10,7 @@
         <!--Compras-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ShoppingViewController" customModule="ControlaImposto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ShoppingViewController" customModule="BrunaKarlaTatianeVictor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,7 +152,7 @@
         <!--Ajustes-->
         <scene sceneID="hjr-nE-JdG">
             <objects>
-                <viewController id="SLN-ii-aCW" customClass="SettingsViewController" customModule="ControlaImposto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SLN-ii-aCW" customClass="SettingsViewController" customModule="BrunaKarlaTatianeVictor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="27b-kp-jD8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -285,64 +285,62 @@
         <!--Product View Controller-->
         <scene sceneID="Q9H-DI-L9u">
             <objects>
-                <viewController id="bFV-Cz-d0k" customClass="ProductViewController" customModule="ControlaImposto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bFV-Cz-d0k" customClass="ProductViewController" customModule="BrunaKarlaTatianeVictor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0nn-Q3-gCO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KI5-8q-AXo" userLabel="btAddState">
-                                <rect key="frame" x="360" y="376" width="34" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="JCr-bU-ou5"/>
-                                    <constraint firstAttribute="width" constant="34" id="kFM-pz-Exu"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KI5-8q-AXo" userLabel="btAddState">
+                                <rect key="frame" x="360" y="388" width="34" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" backgroundImage="plus.circle" catalog="system"/>
                                 <connections>
                                     <segue destination="rds-Jk-Fds" kind="show" id="TSw-dY-h1d"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do produto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CAA-nM-psL" userLabel="tfProductName">
-                                <rect key="frame" x="20" y="88" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do produto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CAA-nM-psL" userLabel="tfProductName">
+                                <rect key="frame" x="20" y="100" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Valor (U$)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ITu-Ma-H2x" userLabel="tfProductPrice">
-                                <rect key="frame" x="20" y="424" width="231" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Valor (U$)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ITu-Ma-H2x" userLabel="tfProductPrice">
+                                <rect key="frame" x="20" y="436" width="231" height="34"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xob-Ot-HBs" userLabel="swCreditCard">
-                                <rect key="frame" x="345" y="425" width="51" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xob-Ot-HBs" userLabel="swCreditCard">
+                                <rect key="frame" x="345" y="437" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <button opaque="NO" contentMode="scaleAspectFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sey-bO-MC8" userLabel="btProductImage">
-                                <rect key="frame" x="20" y="137" width="374" height="223"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="223" id="cn1-Pp-UaP"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sey-bO-MC8" userLabel="btProductImage">
+                                <rect key="frame" x="20" y="149" width="374" height="223"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="placeholder-image"/>
                                 <connections>
                                     <action selector="selectImage:" destination="bFV-Cz-d0k" eventType="touchUpInside" id="JcH-SG-8Qd"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cartão?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xx-71-tdL" userLabel="lbCardSwitch">
-                                <rect key="frame" x="271" y="429" width="64" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cartão?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xx-71-tdL" userLabel="lbCardSwitch">
+                                <rect key="frame" x="271" y="441" width="64" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZb-pb-K9i" userLabel="btRegisterProduct">
-                                <rect key="frame" x="20" y="504" width="374" height="55"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZb-pb-K9i" userLabel="btRegisterProduct">
+                                <rect key="frame" x="20" y="516" width="374" height="55"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="gcI-IZ-H7F"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="CADASTRAR"/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Estado da compra" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rY1-aj-MCB" userLabel="tfProductState">
-                                <rect key="frame" x="20" y="375" width="325" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Estado da compra" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rY1-aj-MCB" userLabel="tfProductState">
+                                <rect key="frame" x="20" y="387" width="325" height="34"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -351,24 +349,16 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Cadastrar produto" id="u2p-Kc-a0h">
-                                        <barButtonItem key="leftBarButtonItem" image="lessthan" catalog="system" width="1" id="V0Y-26-Osg"/>
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" width="1" id="V0Y-26-Osg">
+                                            <connections>
+                                                <action selector="back:" destination="bFV-Cz-d0k" id="XQ6-Gz-q4M"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="xob-Ot-HBs" firstAttribute="top" secondItem="KI5-8q-AXo" secondAttribute="bottom" constant="15" id="7QG-Uh-Mc5"/>
-                            <constraint firstItem="xob-Ot-HBs" firstAttribute="leading" secondItem="3Xx-71-tdL" secondAttribute="trailing" constant="10" id="Ey5-EM-N3v"/>
-                            <constraint firstItem="3Xx-71-tdL" firstAttribute="leading" secondItem="ITu-Ma-H2x" secondAttribute="trailing" constant="20" id="Jsw-Bf-nsB"/>
-                            <constraint firstItem="tZb-pb-K9i" firstAttribute="top" secondItem="ITu-Ma-H2x" secondAttribute="bottom" constant="20" id="ReE-fQ-8ML"/>
-                            <constraint firstItem="Sey-bO-MC8" firstAttribute="top" secondItem="CAA-nM-psL" secondAttribute="bottom" constant="15" id="jgw-6p-noO"/>
-                            <constraint firstItem="KI5-8q-AXo" firstAttribute="leading" secondItem="rY1-aj-MCB" secondAttribute="trailing" constant="15" id="lSX-lh-hCD"/>
-                            <constraint firstItem="3Xx-71-tdL" firstAttribute="top" secondItem="rY1-aj-MCB" secondAttribute="bottom" constant="20" id="qzS-m5-Zb4"/>
-                            <constraint firstItem="KI5-8q-AXo" firstAttribute="top" secondItem="Sey-bO-MC8" secondAttribute="bottom" constant="15" id="r7G-bU-Wdt"/>
-                            <constraint firstItem="ITu-Ma-H2x" firstAttribute="top" secondItem="rY1-aj-MCB" secondAttribute="bottom" constant="15" id="tga-Ph-TVg"/>
-                            <constraint firstItem="rY1-aj-MCB" firstAttribute="top" secondItem="Sey-bO-MC8" secondAttribute="bottom" constant="15" id="wBn-wx-Kck"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ehy-io-IST"/>
                     </view>
                     <navigationItem key="navigationItem" id="Jje-Ym-E7J"/>
@@ -385,7 +375,7 @@
         <!--State View Controller-->
         <scene sceneID="bkk-nt-1b1">
             <objects>
-                <viewController id="rds-Jk-Fds" customClass="StateViewController" customModule="ControlaImposto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rds-Jk-Fds" customClass="StateViewController" customModule="BrunaKarlaTatianeVictor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rbT-bv-Rai">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -407,7 +397,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do estado" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P7M-Yn-Wsn">
-                                        <rect key="frame" x="29" y="54" width="347" height="34"/>
+                                        <rect key="frame" x="29" y="53" width="347" height="34"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -456,7 +446,7 @@
         <!--Total de compra-->
         <scene sceneID="6T5-VK-79H">
             <objects>
-                <viewController id="JOW-bi-EGQ" customClass="TaxesViewController" customModule="ControlaImposto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JOW-bi-EGQ" customClass="TaxesViewController" customModule="BrunaKarlaTatianeVictor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6A5-dW-Oxs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -526,13 +516,12 @@
     </scenes>
     <resources>
         <image name="bag" width="23" height="23"/>
-        <image name="lessthan" catalog="system" width="64" height="54"/>
         <image name="placeholder-image" width="600" height="358"/>
         <image name="plus.circle" catalog="system" width="64" height="60"/>
         <image name="settings" width="23" height="23"/>
         <image name="taxes" width="23" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="f3o-XW-cg6"/>
+        <segue reference="TSw-dY-h1d"/>
     </inferredMetricsTieBreakers>
 </document>
