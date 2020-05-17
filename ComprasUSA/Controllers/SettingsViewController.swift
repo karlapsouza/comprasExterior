@@ -15,7 +15,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var tfTax: UITextField!
     @IBOutlet weak var tvState: UITableView!
   
-    //let config = Configuration.shared
+    let config = Configuration.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +23,13 @@ class SettingsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool){
         super.viewWillAppear(animated)
-        //formatView()
+        formatView()
     }
     
-//    func formatView(){
-//        tfDolar.text = config.valueDolar
-//        tfTax.text = config.valueIOF
-//    }
+    func formatView(){
+        tfDolar.text = String(config.valueDolar)
+        tfTax.text = String(config.valueIOF)
+    }
     
     @IBAction func addState(_ sender: Any) {
     }

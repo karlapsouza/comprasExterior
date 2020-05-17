@@ -12,15 +12,15 @@
 		16B94F20245C353600D17120 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B94F1E245C353600D17120 /* Main.storyboard */; };
 		16B94F25245C353B00D17120 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16B94F24245C353B00D17120 /* Assets.xcassets */; };
 		16B94F28245C353B00D17120 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B94F26245C353B00D17120 /* LaunchScreen.storyboard */; };
-		16B94FB02469AA6A00D17120 /* ShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B94FAF2469AA6A00D17120 /* ShoppingViewController.swift */; };
 		16B94FB22469AA8500D17120 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B94FB12469AA8500D17120 /* SettingsViewController.swift */; };
 		16B94FB42469AAD200D17120 /* TaxesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B94FB32469AAD200D17120 /* TaxesViewController.swift */; };
 		16B94FB62469AB5300D17120 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B94FB52469AB5300D17120 /* ProductViewController.swift */; };
 		16B94FB82469AB6100D17120 /* StateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B94FB72469AB6100D17120 /* StateViewController.swift */; };
 		16B94FBB2469B98800D17120 /* ShoppingLib.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16B94FB92469B98800D17120 /* ShoppingLib.xcdatamodeld */; };
-		16B94FBD2469CCC200D17120 /* UIViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B94FBC2469CCC200D17120 /* UIViewController+CoreData.swift */; };
 		16B94FBF2469D2F300D17120 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 16B94FBE2469D2F300D17120 /* Settings.bundle */; };
 		16B94FC12469F22F00D17120 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B94FC02469F22F00D17120 /* Configuration.swift */; };
+		16D5F3A7247170A000D1BF8C /* ShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5F3A6247170A000D1BF8C /* ShoppingTableViewController.swift */; };
+		16D5F3AE2471736800D1BF8C /* UIViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5F3AD2471736800D1BF8C /* UIViewController+CoreData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,15 +31,15 @@
 		16B94F24245C353B00D17120 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16B94F27245C353B00D17120 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16B94F29245C353B00D17120 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		16B94FAF2469AA6A00D17120 /* ShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewController.swift; sourceTree = "<group>"; };
 		16B94FB12469AA8500D17120 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		16B94FB32469AAD200D17120 /* TaxesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxesViewController.swift; sourceTree = "<group>"; };
 		16B94FB52469AB5300D17120 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		16B94FB72469AB6100D17120 /* StateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewController.swift; sourceTree = "<group>"; };
 		16B94FBA2469B98800D17120 /* ProdutcsLib.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProdutcsLib.xcdatamodel; sourceTree = "<group>"; };
-		16B94FBC2469CCC200D17120 /* UIViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoreData.swift"; sourceTree = "<group>"; };
 		16B94FBE2469D2F300D17120 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		16B94FC02469F22F00D17120 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		16D5F3A6247170A000D1BF8C /* ShoppingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewController.swift; sourceTree = "<group>"; };
+		16D5F3AD2471736800D1BF8C /* UIViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoreData.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,23 +72,47 @@
 		16B94F17245C353600D17120 /* ComprasUSA */ = {
 			isa = PBXGroup;
 			children = (
-				16B94F18245C353600D17120 /* AppDelegate.swift */,
 				16B94F1A245C353600D17120 /* SceneDelegate.swift */,
-				16B94FC02469F22F00D17120 /* Configuration.swift */,
-				16B94F1E245C353600D17120 /* Main.storyboard */,
-				16B94FB52469AB5300D17120 /* ProductViewController.swift */,
-				16B94FBE2469D2F300D17120 /* Settings.bundle */,
-				16B94FBC2469CCC200D17120 /* UIViewController+CoreData.swift */,
-				16B94FB72469AB6100D17120 /* StateViewController.swift */,
-				16B94FB12469AA8500D17120 /* SettingsViewController.swift */,
-				16B94FB32469AAD200D17120 /* TaxesViewController.swift */,
-				16B94FAF2469AA6A00D17120 /* ShoppingViewController.swift */,
+				16B94F18245C353600D17120 /* AppDelegate.swift */,
 				16B94F24245C353B00D17120 /* Assets.xcassets */,
-				16B94F26245C353B00D17120 /* LaunchScreen.storyboard */,
+				16D5F3AD2471736800D1BF8C /* UIViewController+CoreData.swift */,
 				16B94F29245C353B00D17120 /* Info.plist */,
-				16B94FB92469B98800D17120 /* ShoppingLib.xcdatamodeld */,
+				16B94FBE2469D2F300D17120 /* Settings.bundle */,
+				16D5F3AC2471732B00D1BF8C /* View */,
+				16D5F3A8247170FB00D1BF8C /* Controllers */,
+				16D5F3AB2471730C00D1BF8C /* Models */,
 			);
 			path = ComprasUSA;
+			sourceTree = "<group>";
+		};
+		16D5F3A8247170FB00D1BF8C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				16D5F3A6247170A000D1BF8C /* ShoppingTableViewController.swift */,
+				16B94FB52469AB5300D17120 /* ProductViewController.swift */,
+				16B94FB12469AA8500D17120 /* SettingsViewController.swift */,
+				16B94FB32469AAD200D17120 /* TaxesViewController.swift */,
+				16B94FB72469AB6100D17120 /* StateViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		16D5F3AB2471730C00D1BF8C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				16B94FB92469B98800D17120 /* ShoppingLib.xcdatamodeld */,
+				16B94FC02469F22F00D17120 /* Configuration.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		16D5F3AC2471732B00D1BF8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				16B94F1E245C353600D17120 /* Main.storyboard */,
+				16B94F26245C353B00D17120 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,13 +188,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				16B94FB42469AAD200D17120 /* TaxesViewController.swift in Sources */,
+				16D5F3AE2471736800D1BF8C /* UIViewController+CoreData.swift in Sources */,
 				16B94FBB2469B98800D17120 /* ShoppingLib.xcdatamodeld in Sources */,
 				16B94F19245C353600D17120 /* AppDelegate.swift in Sources */,
-				16B94FBD2469CCC200D17120 /* UIViewController+CoreData.swift in Sources */,
+				16D5F3A7247170A000D1BF8C /* ShoppingTableViewController.swift in Sources */,
 				16B94FB62469AB5300D17120 /* ProductViewController.swift in Sources */,
 				16B94FB82469AB6100D17120 /* StateViewController.swift in Sources */,
 				16B94FC12469F22F00D17120 /* Configuration.swift in Sources */,
-				16B94FB02469AA6A00D17120 /* ShoppingViewController.swift in Sources */,
 				16B94FB22469AA8500D17120 /* SettingsViewController.swift in Sources */,
 				16B94F1B245C353600D17120 /* SceneDelegate.swift in Sources */,
 			);

@@ -38,11 +38,11 @@ class Configuration {
     }
     
     private init(){
-        if defaults.double(forKey: UserDefaultsKeys.valueDolar.rawValue) == 0{
+        if defaults.double(forKey: UserDefaultsKeys.valueDolar.rawValue) == 0 {
             defaults.set(5.82, forKey: UserDefaultsKeys.valueDolar.rawValue)
         }
-        if defaults.double(forKey: UserDefaultsKeys.valueIOF.rawValue) == 0{
-            defaults.set(6.38, forKey: UserDefaultsKeys.valueDolar.rawValue)
+        if defaults.double(forKey: UserDefaultsKeys.valueIOF.rawValue) == 0 {
+            defaults.set(6.38, forKey: UserDefaultsKeys.valueIOF.rawValue)
         }
     }
 }

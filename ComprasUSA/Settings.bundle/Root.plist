@@ -10,7 +10,7 @@
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>Group</string>
+			<string>Configuração:</string>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -19,16 +19,10 @@
 			<string>Cotação do dólar</string>
 			<key>Key</key>
 			<string>valueDolar</string>
-			<key>DefaultValue</key>
-			<string>5.82</string>
-			<key>IsSecure</key>
-			<false/>
 			<key>KeyboardType</key>
 			<string>NumbersAndPunctuation</string>
-			<key>AutocapitalizationType</key>
-			<string>None</string>
-			<key>AutocorrectionType</key>
-			<string>No</string>
+			<key>DefaultValue</key>
+			<string>5.82</string>
 		</dict>
 		<dict>
 			<key>Type</key>
