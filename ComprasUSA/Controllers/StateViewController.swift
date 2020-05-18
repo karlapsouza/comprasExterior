@@ -12,6 +12,9 @@ class StateViewController: UIViewController {
 
     @IBOutlet weak var tfStateName: UITextField!
     @IBOutlet weak var tfTax: UITextField!
+    @IBOutlet weak var lbAddEditTitle: UILabel!
+    @IBOutlet weak var btAddEditState: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +22,7 @@ class StateViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func addState(_ sender: Any) {
+    @IBAction func addEditState(_ sender: Any) {
     }
     
     

@@ -11,10 +11,14 @@ import UIKit
 class ProductViewController: UIViewController {
     
     @IBOutlet weak var tfProductName: UITextField!
+    @IBOutlet weak var ivProductImage: UIImageView!
     @IBOutlet weak var btProductImage: UIButton!
     @IBOutlet weak var tfState: UITextField!
-    @IBOutlet weak var tfDolar: UITextField!
+    @IBOutlet weak var tfProductPrice: UITextField!
     @IBOutlet weak var swCreditCard: UISwitch!
+    @IBOutlet weak var btAddEditProduct: UIButton!
+    
+    var product: Product!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +28,21 @@ class ProductViewController: UIViewController {
     @IBAction func selectImage(_ sender: Any) {
     }
     
-    @IBAction func addProduct(_ sender: Any) {
+    @IBAction func addEditProduct(_ sender: Any) {
+        if product == nil {
+            product = Product(context: context)
+        }
+        product.productName = tfProductName.text
+        //product.image =
+        product.state?.name = tfState.text
+        //product.price = Double(tfProductPrice.text)
+        product.useCreditCard = swCreditCard.isOn
+        do{
+            try context.save()
+        }catch{
+          print(error.localizedDescription)
+        }
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func back(_ sender: Any) {
