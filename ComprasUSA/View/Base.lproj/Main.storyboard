@@ -168,7 +168,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNy-jx-966" userLabel="lbStateTax">
-                                                    <rect key="frame" x="645" y="32" width="358" height="27"/>
+                                                    <rect key="frame" x="645" y="31" width="357" height="27"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -233,7 +233,7 @@
             </objects>
             <point key="canvasLocation" x="3344.9275362318845" y="111.83035714285714"/>
         </scene>
-        <!--Product View Controller-->
+        <!--Cadastrar produto-->
         <scene sceneID="Q9H-DI-L9u">
             <objects>
                 <viewController id="bFV-Cz-d0k" customClass="ProductViewController" customModule="BrunaKarlaTatianeVictor" customModuleProvider="target" sceneMemberID="viewController">
@@ -322,7 +322,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Ehy-io-IST"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Jje-Ym-E7J"/>
+                    <navigationItem key="navigationItem" title="Cadastrar produto" id="Jje-Ym-E7J"/>
                     <connections>
                         <outlet property="btAddEditProduct" destination="tZb-pb-K9i" id="N4C-YT-Wvn"/>
                         <outlet property="btProductImage" destination="Sey-bO-MC8" id="jz1-QV-xcK"/>
@@ -345,7 +345,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qHJ-Aw-CJa">
+                            <view alpha="0.34999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qHJ-Aw-CJa">
                                 <rect key="frame" x="0.0" y="-1" width="414" height="897"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -398,7 +398,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="nz3-AU-LOM"/>
                     </view>
-                    <navigationItem key="navigationItem" id="p39-wh-G0D"/>
                     <connections>
                         <outlet property="btAddEditState" destination="yoR-tb-nhc" id="qwD-SJ-rq5"/>
                         <outlet property="lbAddEditTitle" destination="fVr-og-nyw" id="E7f-GM-kn8"/>

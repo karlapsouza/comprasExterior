@@ -33,9 +33,9 @@ class ProductViewController: UIViewController {
             product = Product(context: context)
         }
         product.productName = tfProductName.text
-        //product.image =
+        product.image = ivProductImage.image
         product.state?.name = tfState.text
-        //product.price = Double(tfProductPrice.text)
+        product.price = Double(tfProductPrice.text!)!
         product.useCreditCard = swCreditCard.isOn
         do{
             try context.save()
