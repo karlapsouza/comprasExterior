@@ -22,6 +22,15 @@ class ShoppingTableViewController: UITableViewController {
         loadProducts()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "productSegue" {
+            let vc = segue.destination as! ProductViewController
+            if let products = fetchedResultsController.fetchedObjects{
+                vc.product = products[tableView.indexPathForSelectedRow!.row]
+            }
+        }
+    }
+    
     func loadProducts(){
         let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
         let sortDescritorName = NSSortDescriptor(key: "productName", ascending: true)

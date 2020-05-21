@@ -63,7 +63,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func showAlert(with state: State?){
         let title = state == nil ? "Adicionar" : "Editar"
-        let alert = UIAlertController(title: title + " Estado", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: title + " estado", message: nil, preferredStyle: .alert)
         alert.addTextField { (textFieldName) in
             textFieldName.placeholder = "Nome do estado"
             if let name = state?.name{
