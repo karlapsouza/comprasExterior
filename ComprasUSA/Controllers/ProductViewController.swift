@@ -58,6 +58,32 @@ class ProductViewController: UIViewController {
     
     @IBAction func selectImage(_ sender: Any) {
         
+        let alert = UIAlertController(title: "Selecionar imagem", message: "De onde você quer selecionar a imagem?", preferredStyle: .actionSheet)
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            let cameraAction = UIAlertAction(title: "Câmera", style: .default, handler:  { (action: UIAlertAction) in
+                self.selectPicture(sourceType: .camera)
+            })
+            alert.addAction(cameraAction)
+        }
+        let libraryAction = UIAlertAction(title: "Biblioteca de fotos", style: .default, handler: {(action: UIAlertAction) in
+            self.selectPicture(sourceType: .photoLibrary)
+        })
+        alert.addAction(libraryAction)
+        let photoAction = UIAlertAction(title: "Álbum de fotos", style: .default, handler: {(action: UIAlertAction) in
+            self.selectPicture(sourceType: .savedPhotosAlbum)
+        })
+        alert.addAction(photoAction)
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        present(alert,animated: true,completion: nil)
+        
+    }
+    
+    func selectPicture(sourceType: UIImagePickerController.SourceType){
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = sourceType
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func addEditProduct(_ sender: Any) {
@@ -107,5 +133,16 @@ extension ProductViewController: UIPickerViewDelegate, UIPickerViewDataSource  {
         return state.name
     }
     
+}
+
+extension ProductViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        ivProductImage.image = image
+        btProductImage.setTitle(nil, for: .normal)
+        dismiss(animated: true, completion: nil)
+    }
 }
 
