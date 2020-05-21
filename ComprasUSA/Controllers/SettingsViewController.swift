@@ -50,7 +50,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
            let cell = tableView.dequeueReusableCell(withIdentifier: "stateCell", for: indexPath) as! StateTableViewCell
 
-           let state = statesManager.states[indexPath.row] 
+           let state = statesManager.states[indexPath.row]
            cell.prepare(with: state)
 
            return cell
@@ -97,4 +97,5 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
 }
+
 

@@ -10,6 +10,7 @@ import Foundation
 import CoreData
 
 class StatesManager {
+   
     static let shared = StatesManager()
     var states: [State] = []
     
@@ -33,8 +34,6 @@ class StatesManager {
             print(error.localizedDescription)
         }
     }
-    
-    
     
     private init() {
         

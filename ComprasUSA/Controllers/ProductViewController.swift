@@ -19,10 +19,23 @@ class ProductViewController: UIViewController {
     @IBOutlet weak var btAddEditProduct: UIButton!
     
     var product: Product!
+    let statesManager = StatesManager.shared
+    
+    lazy var pickerView: UIPickerView = {
+        let pickerView = UIPickerView()
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        return pickerView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tfState.inputView = pickerView
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        statesManager.loadStates(with: context)
     }
     
     @IBAction func selectImage(_ sender: Any) {
@@ -57,3 +70,20 @@ class ProductViewController: UIViewController {
     
     
 }
+
+extension ProductViewController: UIPickerViewDelegate, UIPickerViewDataSource  {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return statesManager.states.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let state = statesManager.states[row]
+        return state.name
+    }
+    
+}
+
