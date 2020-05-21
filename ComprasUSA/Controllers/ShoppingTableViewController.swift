@@ -11,36 +11,28 @@ import CoreData
 
 class ShoppingTableViewController: UITableViewController {
     
-    var fetchResultsController: NSFetchedResultsController<Product>!
+    var fetchedResultsController: NSFetchedResultsController<Product>!
     let label = UILabel()
   
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         label.text = "Sua lista está vazia!"
         label.textAlignment = .center
-        
         loadProducts()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     func loadProducts(){
         let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
         let sortDescritorName = NSSortDescriptor(key: "productName", ascending: true)
         let sortDescritorPrice = NSSortDescriptor(key: "price", ascending: true)
-        fetchRequest.sortDescriptors = [sortDescritorName, sortDescritorPrice]
+        fetchRequest.sortDescriptors = [sortDescritorName,sortDescritorPrice]
         
-        fetchResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-        fetchResultsController.delegate = self
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController.delegate = self
         
         do{
-            try fetchResultsController.performFetch()
+            try fetchedResultsController.performFetch()
         }catch{
             print(error.localizedDescription)
         }
@@ -48,16 +40,10 @@ class ShoppingTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let count = fetchResultsController.fetchedObjects?.count ?? 0
+        let count = fetchedResultsController.fetchedObjects?.count ?? 0
         tableView.backgroundView = count == 0 ? label : nil
-        
         return count
     }
 
@@ -65,7 +51,7 @@ class ShoppingTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! ProductTableViewCell
 
-        guard let product = fetchResultsController.fetchedObjects?[indexPath.row] else {
+        guard let product = fetchedResultsController.fetchedObjects?[indexPath.row] else {
             return cell
         }
         cell.prepare(with: product)

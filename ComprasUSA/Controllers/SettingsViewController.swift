@@ -11,11 +11,10 @@ import CoreData
 
 class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var fetchResultsController: NSFetchedResultsController<State>!
+    var fetchedResultsController: NSFetchedResultsController<State>!
     let label = UILabel()
     
     @IBOutlet weak var tfDolar: UITextField!
-    
     @IBOutlet weak var tfTax: UITextField!
     @IBOutlet weak var tvState: UITableView!
   
@@ -33,11 +32,11 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         let sortDescritorName = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDescritorName]
         
-        fetchResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-        fetchResultsController.delegate = self
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController.delegate = self
         
         do{
-            try fetchResultsController.performFetch()
+            try fetchedResultsController.performFetch()
         }catch{
             print(error.localizedDescription)
         }
@@ -49,7 +48,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            let count = fetchResultsController.fetchedObjects?.count ?? 0
+            let count = fetchedResultsController.fetchedObjects?.count ?? 0
             tableView.backgroundView = count == 0 ? label : nil
             return count
        }
@@ -57,7 +56,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
            let cell = tableView.dequeueReusableCell(withIdentifier: "stateCell", for: indexPath) as! StateTableViewCell
 
-           guard let state = fetchResultsController.fetchedObjects?[indexPath.row] else {
+           guard let state = fetchedResultsController.fetchedObjects?[indexPath.row] else {
                return cell
            }
            cell.prepare(with: state)

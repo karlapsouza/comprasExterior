@@ -25,7 +25,7 @@ class StateTableViewCell: UITableViewCell {
     }
     
     func prepare(with state: State){
-        lbStateName.text = state.name ?? ""
+        lbStateName.text = state.name 
         lbStateTax.text = String(state.tax)
     }
 

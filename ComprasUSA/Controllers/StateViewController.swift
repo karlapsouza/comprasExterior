@@ -15,6 +15,8 @@ class StateViewController: UIViewController {
     @IBOutlet weak var lbAddEditTitle: UILabel!
     @IBOutlet weak var btAddEditState: UIButton!
     
+    var state: State!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,17 @@ class StateViewController: UIViewController {
     }
     
     @IBAction func addEditState(_ sender: Any) {
+        if state == nil{
+            state = State(context: context)
+            state.name = tfStateName.text
+            state.tax = Double(tfTax.text!)!
+        do{
+                try context.save()
+            }catch{
+              print(error.localizedDescription)
+            }
+            navigationController?.popViewController(animated: true)
+        }
     }
     
     
