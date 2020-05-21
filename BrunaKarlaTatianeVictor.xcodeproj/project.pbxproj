@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1655A9502471E1BE00C08C09 /* TaxesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1655A94F2471E1BE00C08C09 /* TaxesTableViewController.swift */; };
+		16A8ED642476AF88004265DE /* StatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A8ED632476AF88004265DE /* StatesManager.swift */; };
 		16B282982471ADFF00AA085A /* StateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B282972471ADFF00AA085A /* StateTableViewCell.swift */; };
 		16B2829A2471AE1A00AA085A /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B282992471AE1A00AA085A /* ProductTableViewCell.swift */; };
 		16B94F19245C353600D17120 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B94F18245C353600D17120 /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		1655A94F2471E1BE00C08C09 /* TaxesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxesTableViewController.swift; sourceTree = "<group>"; };
+		16A8ED632476AF88004265DE /* StatesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesManager.swift; sourceTree = "<group>"; };
 		16B282972471ADFF00AA085A /* StateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableViewCell.swift; sourceTree = "<group>"; };
 		16B282992471AE1A00AA085A /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		16B94F15245C353600D17120 /* BrunaKarlaTatianeVictor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrunaKarlaTatianeVictor.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +91,7 @@
 				16D5F3AC2471732B00D1BF8C /* View */,
 				16D5F3A8247170FB00D1BF8C /* Controllers */,
 				16D5F3AB2471730C00D1BF8C /* Models */,
+				16A8ED632476AF88004265DE /* StatesManager.swift */,
 			);
 			path = ComprasUSA;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				16D5F3AE2471736800D1BF8C /* UIViewController+CoreData.swift in Sources */,
 				16B94FBB2469B98800D17120 /* ShoppingLib.xcdatamodeld in Sources */,
 				16B94F19245C353600D17120 /* AppDelegate.swift in Sources */,
+				16A8ED642476AF88004265DE /* StatesManager.swift in Sources */,
 				16B2829A2471AE1A00AA085A /* ProductTableViewCell.swift in Sources */,
 				16D5F3A7247170A000D1BF8C /* ShoppingTableViewController.swift in Sources */,
 				1655A9502471E1BE00C08C09 /* TaxesTableViewController.swift in Sources */,

@@ -19,27 +19,20 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var tvState: UITableView!
   
     let config = Configuration.shared
+    var statesManager = StatesManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
         label.text = "Lista de estados vazia."
         label.textAlignment = .center
-        loadState()
+        loadStates()
+        
     }
     
-    func loadState(){
-        let fetchRequest: NSFetchRequest<State> = State.fetchRequest()
-        let sortDescritorName = NSSortDescriptor(key: "name", ascending: true)
-        fetchRequest.sortDescriptors = [sortDescritorName]
+    func loadStates(){
+        statesManager.loadStates(with: context)
+        tvState.reloadData()
         
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-        fetchedResultsController.delegate = self
-        
-        do{
-            try fetchedResultsController.performFetch()
-        }catch{
-            print(error.localizedDescription)
-        }
     }
     
     override func viewWillAppear(_ animated: Bool){
@@ -48,17 +41,16 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            let count = fetchedResultsController.fetchedObjects?.count ?? 0
+            let count = statesManager.states.count
             tableView.backgroundView = count == 0 ? label : nil
+            
             return count
        }
        
        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
            let cell = tableView.dequeueReusableCell(withIdentifier: "stateCell", for: indexPath) as! StateTableViewCell
 
-           guard let state = fetchedResultsController.fetchedObjects?[indexPath.row] else {
-               return cell
-           }
+           let state = statesManager.states[indexPath.row] 
            cell.prepare(with: state)
 
            return cell
@@ -69,19 +61,40 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         tfTax.text = String(config.valueIOF)
     }
     
+    func showAlert(with state: State?){
+        let title = state == nil ? "Adicionar" : "Editar"
+        let alert = UIAlertController(title: title + " Estado", message: nil, preferredStyle: .alert)
+        alert.addTextField { (textFieldName) in
+            textFieldName.placeholder = "Nome do estado"
+            if let name = state?.name{
+                textFieldName.text = name
+            }
+        }
+        alert.addTextField { (textFieldTax) in
+            textFieldTax.placeholder = "Imposto"
+            if let tax = state?.tax{
+                           textFieldTax.text = String(tax)
+                       }
+        }
+        alert.addAction(UIAlertAction(title: title, style: .default, handler: { (action) in
+            let state = state ?? State(context: self.context)
+            state.name = alert.textFields?.first?.text
+            state.tax = ((alert.textFields?.last?.text)! as NSString).doubleValue
+            do{
+                try self.context.save()
+                self.loadStates()
+            }catch{
+                print(error.localizedDescription)
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
     @IBAction func addState(_ sender: Any) {
+        showAlert(with: nil)
     }
     
 }
 
-extension SettingsViewController: NSFetchedResultsControllerDelegate{
-    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-        
-        switch type {
-            case .delete:
-                break
-            default:
-                tvState.reloadData()
-        }
-    }
-}

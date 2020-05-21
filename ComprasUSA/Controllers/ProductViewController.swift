@@ -50,4 +50,10 @@ class ProductViewController: UIViewController {
     }
     
     
+    @IBAction func addState(_ sender: Any) {
+        // consultar: https://stackoverflow.com/questions/45161615/use-same-uialertcontroller-in-different-viewcontrollers
+        //showAlert(with: nil)
+    }
+    
+    
 }
