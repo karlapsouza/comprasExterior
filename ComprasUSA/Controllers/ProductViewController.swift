@@ -30,8 +30,26 @@ class ProductViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 44))
+        let btCancel = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
+        let btDone = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
+        let btFlexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        toolbar.items = [btCancel, btFlexibleSpace, btDone]
+        
+        
         tfState.inputView = pickerView
+        tfState.inputAccessoryView = toolbar
 
+    }
+    
+    @objc func cancel() {
+        tfState.resignFirstResponder()
+    }
+    
+    @objc func done() {
+        tfState.text = statesManager.states[pickerView.selectedRow(inComponent: 0)].name
+        cancel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +57,7 @@ class ProductViewController: UIViewController {
     }
     
     @IBAction func selectImage(_ sender: Any) {
+        
     }
     
     @IBAction func addEditProduct(_ sender: Any) {
@@ -47,7 +66,10 @@ class ProductViewController: UIViewController {
         }
         product.productName = tfProductName.text
         //product.image = ivProductImage.image
-        product.state?.name = tfState.text
+        if !tfState.text!.isEmpty {
+            let state = statesManager.states[pickerView.selectedRow(inComponent: 0)]
+            product.state = state
+        }
         product.price = Double(tfProductPrice.text!)!
         product.useCreditCard = swCreditCard.isOn
         do{
