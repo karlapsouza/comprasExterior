@@ -51,25 +51,35 @@
                                     <rect key="frame" x="0.0" y="0.0" width="383" height="81"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k0j-YV-Yno">
-                                            <rect key="frame" x="11" y="4" width="81" height="68"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k0j-YV-Yno">
+                                            <rect key="frame" x="16" y="8" width="80" height="65"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="D0O-tJ-fLf"/>
+                                                <constraint firstAttribute="width" constant="80" id="SoT-F1-9wH"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome do produto" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUo-J4-N0G">
-                                            <rect key="frame" x="100" y="13" width="242" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do produto" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUo-J4-N0G">
+                                            <rect key="frame" x="106" y="17" width="134.5" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="U$ 1000,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCe-VY-bog">
-                                            <rect key="frame" x="100" y="42" width="242" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="U$ 1000,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCe-VY-bog">
+                                            <rect key="frame" x="106" y="45.5" width="90" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="vUo-J4-N0G" firstAttribute="top" secondItem="UT7-Ex-IpJ" secondAttribute="topMargin" constant="6" id="4Ve-mZ-73y"/>
+                                        <constraint firstItem="vUo-J4-N0G" firstAttribute="leading" secondItem="k0j-YV-Yno" secondAttribute="trailing" constant="10" id="dms-AF-QbY"/>
+                                        <constraint firstItem="k0j-YV-Yno" firstAttribute="leading" secondItem="UT7-Ex-IpJ" secondAttribute="leading" constant="16" id="gK6-xr-mSh"/>
+                                        <constraint firstItem="zCe-VY-bog" firstAttribute="leading" secondItem="k0j-YV-Yno" secondAttribute="trailing" constant="10" id="ise-fN-8RS"/>
+                                        <constraint firstItem="zCe-VY-bog" firstAttribute="top" secondItem="vUo-J4-N0G" secondAttribute="bottom" constant="8" id="lbC-Do-VaE"/>
+                                        <constraint firstAttribute="bottom" secondItem="k0j-YV-Yno" secondAttribute="bottom" constant="8" id="wKv-kq-Gos"/>
+                                        <constraint firstItem="k0j-YV-Yno" firstAttribute="top" secondItem="UT7-Ex-IpJ" secondAttribute="top" constant="8" id="xKU-My-t1I"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="ivProductImage" destination="k0j-YV-Yno" id="p12-fe-DnT"/>
@@ -149,33 +159,39 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="e1b-uA-Yo3">
-                                    <rect key="frame" x="0.0" y="143.5" width="414" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="137" width="414" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stateCell" id="gXD-aY-k4K" userLabel="stateCell" customClass="StateTableViewCell" customModule="BrunaKarlaTatianeVictor" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="72" width="414" height="37"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gXD-aY-k4K" id="eAL-fM-RhI">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="37"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Estado" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esP-q9-Xoz" userLabel="lbStateName">
-                                                    <rect key="frame" x="27" y="11" width="172" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estado" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esP-q9-Xoz" userLabel="lbStateName">
+                                                    <rect key="frame" x="20" y="8" width="53" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNy-jx-966" userLabel="lbStateTax">
-                                                    <rect key="frame" x="269" y="-1" width="106" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNy-jx-966" userLabel="lbStateTax">
+                                                    <rect key="frame" x="354" y="7" width="34" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="esP-q9-Xoz" firstAttribute="leading" secondItem="eAL-fM-RhI" secondAttribute="leading" constant="20" id="4up-Vm-JDZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="esP-q9-Xoz" secondAttribute="bottom" constant="8" id="gJO-Y7-gLh"/>
+                                                <constraint firstItem="esP-q9-Xoz" firstAttribute="top" secondItem="eAL-fM-RhI" secondAttribute="top" constant="8" id="l8q-I6-LhC"/>
+                                                <constraint firstAttribute="trailing" secondItem="TNy-jx-966" secondAttribute="trailing" constant="20" id="lcK-JL-pgF"/>
+                                                <constraint firstItem="TNy-jx-966" firstAttribute="top" secondItem="eAL-fM-RhI" secondAttribute="top" constant="8" id="onK-Tf-mrc"/>
+                                                <constraint firstAttribute="bottom" secondItem="TNy-jx-966" secondAttribute="bottom" constant="8" id="qYs-CY-DB5"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="lbStateName" destination="esP-q9-Xoz" id="Mhl-Db-rFn"/>
