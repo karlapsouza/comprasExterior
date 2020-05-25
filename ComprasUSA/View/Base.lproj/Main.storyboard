@@ -59,24 +59,24 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do produto" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUo-J4-N0G">
-                                            <rect key="frame" x="106" y="17" width="134.5" height="20.5"/>
+                                            <rect key="frame" x="106" y="15" width="134.5" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="U$ 1000,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCe-VY-bog">
-                                            <rect key="frame" x="106" y="45.5" width="90" height="21"/>
+                                            <rect key="frame" x="106" y="39.5" width="90" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="vUo-J4-N0G" firstAttribute="top" secondItem="UT7-Ex-IpJ" secondAttribute="topMargin" constant="6" id="4Ve-mZ-73y"/>
+                                        <constraint firstItem="vUo-J4-N0G" firstAttribute="top" secondItem="UT7-Ex-IpJ" secondAttribute="topMargin" constant="4" id="4Ve-mZ-73y"/>
                                         <constraint firstItem="vUo-J4-N0G" firstAttribute="leading" secondItem="k0j-YV-Yno" secondAttribute="trailing" constant="10" id="dms-AF-QbY"/>
                                         <constraint firstItem="k0j-YV-Yno" firstAttribute="leading" secondItem="UT7-Ex-IpJ" secondAttribute="leading" constant="16" id="gK6-xr-mSh"/>
                                         <constraint firstItem="zCe-VY-bog" firstAttribute="leading" secondItem="k0j-YV-Yno" secondAttribute="trailing" constant="10" id="ise-fN-8RS"/>
-                                        <constraint firstItem="zCe-VY-bog" firstAttribute="top" secondItem="vUo-J4-N0G" secondAttribute="bottom" constant="8" id="lbC-Do-VaE"/>
+                                        <constraint firstItem="zCe-VY-bog" firstAttribute="top" secondItem="vUo-J4-N0G" secondAttribute="bottom" constant="4" id="lbC-Do-VaE"/>
                                         <constraint firstAttribute="bottom" secondItem="k0j-YV-Yno" secondAttribute="bottom" constant="8" id="wKv-kq-Gos"/>
                                         <constraint firstItem="k0j-YV-Yno" firstAttribute="top" secondItem="UT7-Ex-IpJ" secondAttribute="top" constant="8" id="xKU-My-t1I"/>
                                     </constraints>
@@ -172,7 +172,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estado" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esP-q9-Xoz" userLabel="lbStateName">
-                                                    <rect key="frame" x="20" y="8" width="53" height="21"/>
+                                                    <rect key="frame" x="25" y="8" width="53" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -185,10 +185,10 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="esP-q9-Xoz" firstAttribute="leading" secondItem="eAL-fM-RhI" secondAttribute="leading" constant="20" id="4up-Vm-JDZ"/>
+                                                <constraint firstItem="esP-q9-Xoz" firstAttribute="leading" secondItem="eAL-fM-RhI" secondAttribute="leading" constant="25" id="4up-Vm-JDZ"/>
                                                 <constraint firstAttribute="bottom" secondItem="esP-q9-Xoz" secondAttribute="bottom" constant="8" id="gJO-Y7-gLh"/>
                                                 <constraint firstItem="esP-q9-Xoz" firstAttribute="top" secondItem="eAL-fM-RhI" secondAttribute="top" constant="8" id="l8q-I6-LhC"/>
-                                                <constraint firstAttribute="trailing" secondItem="TNy-jx-966" secondAttribute="trailing" constant="20" id="lcK-JL-pgF"/>
+                                                <constraint firstAttribute="trailing" secondItem="TNy-jx-966" secondAttribute="trailing" constant="25" id="lcK-JL-pgF"/>
                                                 <constraint firstItem="TNy-jx-966" firstAttribute="top" secondItem="eAL-fM-RhI" secondAttribute="top" constant="8" id="onK-Tf-mrc"/>
                                                 <constraint firstAttribute="bottom" secondItem="TNy-jx-966" secondAttribute="bottom" constant="8" id="qYs-CY-DB5"/>
                                             </constraints>
