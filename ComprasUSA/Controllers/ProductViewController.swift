@@ -35,27 +35,27 @@ class ProductViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool){
         super .viewWillAppear(animated)
         
-        statesManager.loadStates(with: context)
-        
-        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 44))
-        let btCancel = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
-        let btDone = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
-        let btFlexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        toolbar.items = [btCancel, btFlexibleSpace, btDone]
-        
-        tfState.inputView = pickerView
-        tfState.inputAccessoryView = toolbar
-        
         if(product != nil) {
+            title = "Editar produto"
+            btAddEditProduct.setTitle("ALTERAR", for: .normal)
             tfProductName.text = product.productName
             if let image = product.image as? UIImage {
                 ivProductImage.image = image
             }else{
                 ivProductImage.image = UIImage(named: "placeholder-image")
             }
-            tfState.text = product.state?.name
+            if btProductImage != nil{
+                btProductImage.setTitle(nil, for: .normal)
+            }
+            if let state = product.state, let index = statesManager.states.firstIndex(of: state) {
+                tfState.text = state.name
+                pickerView.selectRow(index, inComponent: 0, animated: true)
+            }
             tfProductPrice.text = String(product.price)
         }
+        statesManager.loadStates(with: context)
+        prepareStateTextField()
+        
     }
     
     @objc func cancel() {
@@ -70,6 +70,17 @@ class ProductViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! ProductViewController
         vc.product = product
+    }
+    
+    func prepareStateTextField(){
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 44))
+        let btCancel = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
+        let btDone = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
+        let btFlexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        toolbar.items = [btCancel, btFlexibleSpace, btDone]
+        
+        tfState.inputView = pickerView
+        tfState.inputAccessoryView = toolbar
     }
 
     

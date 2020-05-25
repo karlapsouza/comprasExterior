@@ -47,14 +47,26 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
             return count
        }
        
-       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
            let cell = tableView.dequeueReusableCell(withIdentifier: "stateCell", for: indexPath) as! StateTableViewCell
 
            let state = statesManager.states[indexPath.row]
            cell.prepare(with: state)
 
            return cell
-       }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let state = statesManager.states[indexPath.row]
+            context.delete(state)
+            loadStates()
+        }
+        
+        //adicionar botão editar: https://www.youtube.com/watch?v=5QdAPoFYBqM https://www.youtube.com/watch?v=wUVfE8cY2Hw
+    }
+    
     
     func formatView(){
         tfDolar.text = String(config.valueDolar)
@@ -97,5 +109,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
 }
+
+
 
 

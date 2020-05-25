@@ -67,6 +67,13 @@ class ShoppingTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            guard let product = fetchedResultsController.fetchedObjects?[indexPath.row] else {return}
+            context.delete(product)
+        }
+    }
 
 }
 
@@ -75,6 +82,9 @@ extension ShoppingTableViewController: NSFetchedResultsControllerDelegate{
         
         switch type {
             case .delete:
+                if let indexPath = indexPath {
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                }
                 break
             default:
                 self.tableView.reloadData()
