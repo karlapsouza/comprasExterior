@@ -61,7 +61,12 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         if editingStyle == .delete {
             let state = statesManager.states[indexPath.row]
             context.delete(state)
-            loadStates()
+            do{
+                try context.save()
+                loadStates()
+            }catch{
+                print(error.localizedDescription)
+            }
         }
         
         //adicionar botão editar: https://www.youtube.com/watch?v=5QdAPoFYBqM https://www.youtube.com/watch?v=wUVfE8cY2Hw
@@ -107,6 +112,8 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBAction func addState(_ sender: Any) {
         showAlert(with: nil)
     }
+    
+    //Desabilitar botão: https://www.it-swarm.dev/pt/ios/ativar-um-botao-no-swift-somente-se-todos-os-campos-de-texto-tiverem-sido-preenchidos/822729121/
     
 }
 

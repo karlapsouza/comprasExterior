@@ -72,6 +72,12 @@ class ShoppingTableViewController: UITableViewController {
         if editingStyle == .delete {
             guard let product = fetchedResultsController.fetchedObjects?[indexPath.row] else {return}
             context.delete(product)
+            do{
+                try context.save()
+                loadProducts()
+            }catch{
+                print(error.localizedDescription)
+            }
         }
     }
 
