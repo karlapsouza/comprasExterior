@@ -19,5 +19,14 @@ class TaxesViewController: UIViewController {
       
     }
     
+//    func setAmmount(){
+//        
+//        tc.shoppingValue = tc.convertToDouble(tfDolar.text!)
+//        lbRealResult.text = tc.getFormattedValue(of: tc.shoppingValue * tc.dolar, withCurrency: "R$ ")
+//        let dolar = tc.getFormattedValue(of: tc.dolar, withCurrency: "")
+//        lbDolarResult.text = "Valor sem impostos (dólar \(dolar))"
+//        
+//    }
+    
 
 }

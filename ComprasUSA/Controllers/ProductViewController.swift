@@ -19,6 +19,8 @@ class ProductViewController: UIViewController {
     @IBOutlet weak var btAddEditProduct: UIButton!
     
     var product: Product!
+    var state: State!
+    var vcState: SettingsViewController!
     let statesManager = StatesManager.shared
     
     lazy var pickerView: UIPickerView = {
@@ -139,9 +141,41 @@ class ProductViewController: UIViewController {
     }
     
     
+    func showAlert(with state: State?){
+        let title = state == nil ? "Adicionar" : "Editar"
+        let alert = UIAlertController(title: title + " estado", message: nil, preferredStyle: .alert)
+        alert.addTextField { (textFieldName) in
+            textFieldName.placeholder = "Nome do estado"
+            if let name = state?.name{
+                textFieldName.text = name
+            }
+        }
+        alert.addTextField { (textFieldTax) in
+            textFieldTax.placeholder = "Imposto"
+            if let tax = state?.tax{
+                           textFieldTax.text = String(tax)
+                       }
+        }
+        alert.addAction(UIAlertAction(title: title, style: .default, handler: { (action) in
+            let state = state ?? State(context: self.context)
+            state.name = alert.textFields?.first?.text
+            state.tax = ((alert.textFields?.last?.text)! as NSString).doubleValue
+            do{
+                try self.context.save()
+            }catch{
+                print(error.localizedDescription)
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
+    
     @IBAction func addState(_ sender: Any) {
-        // consultar: https://stackoverflow.com/questions/45161615/use-same-uialertcontroller-in-different-viewcontrollers
-        //showAlert(with: nil)
+        showAlert(with: nil)
+        statesManager.loadStates(with: context)
+        prepareStateTextField()
     }
     
     
@@ -173,4 +207,5 @@ extension ProductViewController: UIImagePickerControllerDelegate, UINavigationCo
         dismiss(animated: true, completion: nil)
     }
 }
+
 
