@@ -21,16 +21,11 @@ class TaxesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        lbRealResult.text = String(shoppingValueInReal)
-        lbDolarResult.text = String(total())
+        lbRealResult.text = String(totalReal())
+        lbDolarResult.text = String(totalDolar())
     }
  
 
-    var shoppingValueInReal: Double {
-        let dolar = config.valueDolar
-        return total() * dolar
-    }
-    
     func stateTaxValue(shoppingValue: Double, stateTax: Double) -> Double {
         return (shoppingValue * stateTax)/100
     }
@@ -42,7 +37,8 @@ class TaxesViewController: UIViewController {
     }
     
     
-    func total() -> Double{
+    func totalReal() -> Double{
+        let dolar = config.valueDolar
         let entityDescription = NSEntityDescription.entity(forEntityName: "Product", in: context)
         let request = NSFetchRequest<NSFetchRequestResult>()
         request.entity = entityDescription
@@ -61,9 +57,33 @@ class TaxesViewController: UIViewController {
             if p.useCreditCard {
                 valueListProduct += iofValue(shoppingValue: valueListProduct, stateTax: stateTax)
             }
+            valueListProduct += p.price
         }
+        return valueListProduct * dolar
+    }
+    
+    func totalDolar() -> Double{
+        let entityDescription = NSEntityDescription.entity(forEntityName: "Product", in: context)
+        let request = NSFetchRequest<NSFetchRequestResult>()
+        request.entity = entityDescription
+        var productObjs = [Product]()
+        do{
+            try productObjs = context.fetch(request) as! [Product] }
+        catch {
+            print(error.localizedDescription)
+        }
+        
+        var valueListProduct: Double = 0.0
+        
+        for p in productObjs {
+            let stateTax = Double(p.state!.tax)
+            valueListProduct += stateTaxValue(shoppingValue: p.price, stateTax: stateTax)
+            valueListProduct += p.price
+        }
+        
         return valueListProduct
     }
+    
     
 
 }
