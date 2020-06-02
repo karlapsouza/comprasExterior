@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1655A9502471E1BE00C08C09 /* TaxesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1655A94F2471E1BE00C08C09 /* TaxesTableViewController.swift */; };
 		16A8ED642476AF88004265DE /* StatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A8ED632476AF88004265DE /* StatesManager.swift */; };
 		16B282982471ADFF00AA085A /* StateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B282972471ADFF00AA085A /* StateTableViewCell.swift */; };
 		16B2829A2471AE1A00AA085A /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B282992471AE1A00AA085A /* ProductTableViewCell.swift */; };
@@ -19,7 +18,6 @@
 		16B94FB22469AA8500D17120 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B94FB12469AA8500D17120 /* SettingsViewController.swift */; };
 		16B94FB42469AAD200D17120 /* TaxesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B94FB32469AAD200D17120 /* TaxesViewController.swift */; };
 		16B94FB62469AB5300D17120 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B94FB52469AB5300D17120 /* ProductViewController.swift */; };
-		16B94FB82469AB6100D17120 /* StateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B94FB72469AB6100D17120 /* StateViewController.swift */; };
 		16B94FBB2469B98800D17120 /* ShoppingLib.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16B94FB92469B98800D17120 /* ShoppingLib.xcdatamodeld */; };
 		16B94FBF2469D2F300D17120 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 16B94FBE2469D2F300D17120 /* Settings.bundle */; };
 		16B94FC12469F22F00D17120 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B94FC02469F22F00D17120 /* Configuration.swift */; };
@@ -28,7 +26,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1655A94F2471E1BE00C08C09 /* TaxesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxesTableViewController.swift; sourceTree = "<group>"; };
 		16A8ED632476AF88004265DE /* StatesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesManager.swift; sourceTree = "<group>"; };
 		16B282972471ADFF00AA085A /* StateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableViewCell.swift; sourceTree = "<group>"; };
 		16B282992471AE1A00AA085A /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
@@ -42,7 +39,6 @@
 		16B94FB12469AA8500D17120 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		16B94FB32469AAD200D17120 /* TaxesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxesViewController.swift; sourceTree = "<group>"; };
 		16B94FB52469AB5300D17120 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
-		16B94FB72469AB6100D17120 /* StateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewController.swift; sourceTree = "<group>"; };
 		16B94FBA2469B98800D17120 /* ProdutcsLib.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProdutcsLib.xcdatamodel; sourceTree = "<group>"; };
 		16B94FBE2469D2F300D17120 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		16B94FC02469F22F00D17120 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
@@ -102,9 +98,7 @@
 				16D5F3A6247170A000D1BF8C /* ShoppingTableViewController.swift */,
 				16B94FB12469AA8500D17120 /* SettingsViewController.swift */,
 				16B94FB52469AB5300D17120 /* ProductViewController.swift */,
-				1655A94F2471E1BE00C08C09 /* TaxesTableViewController.swift */,
 				16B94FB32469AAD200D17120 /* TaxesViewController.swift */,
-				16B94FB72469AB6100D17120 /* StateViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -207,9 +201,7 @@
 				16A8ED642476AF88004265DE /* StatesManager.swift in Sources */,
 				16B2829A2471AE1A00AA085A /* ProductTableViewCell.swift in Sources */,
 				16D5F3A7247170A000D1BF8C /* ShoppingTableViewController.swift in Sources */,
-				1655A9502471E1BE00C08C09 /* TaxesTableViewController.swift in Sources */,
 				16B94FB62469AB5300D17120 /* ProductViewController.swift in Sources */,
-				16B94FB82469AB6100D17120 /* StateViewController.swift in Sources */,
 				16B94FC12469F22F00D17120 /* Configuration.swift in Sources */,
 				16B94FB22469AA8500D17120 /* SettingsViewController.swift in Sources */,
 				16B94F1B245C353600D17120 /* SceneDelegate.swift in Sources */,

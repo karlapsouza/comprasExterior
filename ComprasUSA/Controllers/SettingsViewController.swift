@@ -21,6 +21,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     let config = Configuration.shared
     var statesManager = StatesManager.shared
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         label.text = "Lista de estados vazia."
