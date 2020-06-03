@@ -88,7 +88,7 @@ class ProductViewController: UIViewController {
     
     @IBAction func selectImage(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Selecionar imagem", message: "De onde você quer selecionar a imagem?", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "Selecionar imagem", message: "De onde gostaria de selecionar a imagem?", preferredStyle: .actionSheet)
         if UIImagePickerController.isSourceTypeAvailable(.camera){
             let cameraAction = UIAlertAction(title: "Câmera", style: .default, handler:  { (action: UIAlertAction) in
                 self.selectPicture(sourceType: .camera)
@@ -99,10 +99,6 @@ class ProductViewController: UIViewController {
             self.selectPicture(sourceType: .photoLibrary)
         })
         alert.addAction(libraryAction)
-        let photoAction = UIAlertAction(title: "Álbum de fotos", style: .default, handler: {(action: UIAlertAction) in
-            self.selectPicture(sourceType: .savedPhotosAlbum)
-        })
-        alert.addAction(photoAction)
         let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
         alert.addAction(cancelAction)
         present(alert,animated: true,completion: nil)
