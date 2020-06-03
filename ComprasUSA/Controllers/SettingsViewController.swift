@@ -72,6 +72,12 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let state = statesManager.states[indexPath.row]
+        showAlert(with: state)
+    }
+    
+    
     func formatView(){
         tfDolar.text = String(config.valueDolar)
         tfTax.text = String(config.valueIOF)
@@ -107,15 +113,9 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         present(alert, animated: true, completion: nil)
         
     }
-            
     
     @IBAction func addState(_ sender: Any) {
         showAlert(with: nil)
-    }
-    
-    
-    @IBAction func editState(_ sender: Any) {
-        
     }
     
     

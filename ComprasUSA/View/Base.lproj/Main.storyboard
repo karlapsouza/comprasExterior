@@ -219,25 +219,13 @@
                                                     <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Op5-hb-YdH">
-                                                    <rect key="frame" x="0.0" y="3" width="414" height="40"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="h6w-Z4-yNF"/>
-                                                    </constraints>
-                                                    <connections>
-                                                        <action selector="editState:" destination="SLN-ii-aCW" eventType="touchUpInside" id="Xgm-4y-lJE"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="esP-q9-Xoz" firstAttribute="leading" secondItem="eAL-fM-RhI" secondAttribute="leading" constant="25" id="4up-Vm-JDZ"/>
-                                                <constraint firstAttribute="trailing" secondItem="Op5-hb-YdH" secondAttribute="trailing" id="LnF-6k-Fs2"/>
-                                                <constraint firstItem="Op5-hb-YdH" firstAttribute="top" secondItem="eAL-fM-RhI" secondAttribute="topMargin" constant="-8" id="N7d-2b-iyi"/>
                                                 <constraint firstAttribute="trailing" secondItem="TNy-jx-966" secondAttribute="trailing" constant="25" id="RTb-zM-brJ"/>
                                                 <constraint firstItem="TNy-jx-966" firstAttribute="leading" secondItem="esP-q9-Xoz" secondAttribute="trailing" constant="10" id="UqF-MQ-69a"/>
                                                 <constraint firstAttribute="bottom" secondItem="esP-q9-Xoz" secondAttribute="bottom" constant="8" id="gJO-Y7-gLh"/>
                                                 <constraint firstItem="esP-q9-Xoz" firstAttribute="top" secondItem="eAL-fM-RhI" secondAttribute="top" constant="8" id="l8q-I6-LhC"/>
-                                                <constraint firstItem="Op5-hb-YdH" firstAttribute="leading" secondItem="eAL-fM-RhI" secondAttribute="leading" id="lMa-iC-kXc"/>
                                                 <constraint firstItem="TNy-jx-966" firstAttribute="top" secondItem="eAL-fM-RhI" secondAttribute="top" constant="8" id="onK-Tf-mrc"/>
                                                 <constraint firstAttribute="bottom" secondItem="TNy-jx-966" secondAttribute="bottom" constant="8" id="qYs-CY-DB5"/>
                                             </constraints>

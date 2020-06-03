@@ -25,15 +25,6 @@ class StatesManager {
         }
     }
     
-    func deleteState(index: Int, context: NSManagedObjectContext){
-        let state = states[index]
-        context.delete(state)
-        do{
-            try context.save()
-        }catch{
-            print(error.localizedDescription)
-        }
-    }
     
     private init() {
         
