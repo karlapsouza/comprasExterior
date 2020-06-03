@@ -26,7 +26,6 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         label.text = "Lista de estados vazia."
         label.textAlignment = .center
-        loadStates()
         
     }
     
@@ -39,6 +38,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewWillAppear(_ animated: Bool){
         super.viewWillAppear(animated)
         formatView()
+        loadStates()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -107,10 +107,17 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         present(alert, animated: true, completion: nil)
         
     }
+            
     
     @IBAction func addState(_ sender: Any) {
         showAlert(with: nil)
     }
+    
+    
+    @IBAction func editState(_ sender: Any) {
+        
+    }
+    
     
     //Desabilitar botão: https://www.it-swarm.dev/pt/ios/ativar-um-botao-no-swift-somente-se-todos-os-campos-de-texto-tiverem-sido-preenchidos/822729121/
     
