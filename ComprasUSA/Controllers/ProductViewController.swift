@@ -32,6 +32,8 @@ class ProductViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        btAddEditProduct.isEnabled = false
+//        [tfProductName, tfState, tfProductPrice].forEach({ $0.addTarget(self, action: #selector(editingChanged), for: .editingChanged) })
     }
     
     override func viewWillAppear(_ animated: Bool){
@@ -119,10 +121,15 @@ class ProductViewController: UIViewController {
         if product == nil {
             product = Product(context: context)
         }
+//        if editingChanged([tfProductName, tfState, tfProductPrice]){
+//            btAddEditProduct.isEnabled = true
+//        }
         product.productName = tfProductName.text
         if !tfState.text!.isEmpty {
             let state = statesManager.states[pickerView.selectedRow(inComponent: 0)]
             product.state = state
+        }else{
+            
         }
         product.image = ivProductImage.image
         product.price = Double(tfProductPrice.text!)!
@@ -135,6 +142,16 @@ class ProductViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+//    @objc func editingChanged(_ textsField: [UITextField]) -> Bool {
+//        var tf = true
+//        for textField in textsField{
+//            if textField.text?.count == 0 {
+//                tf = false
+//            }
+//        }
+//        return tf
+//    }
+    
     @IBAction func back(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -142,7 +159,6 @@ class ProductViewController: UIViewController {
     @IBAction func addState(_ sender: Any) {
 
     }
-    
     
 }
 

@@ -21,10 +21,13 @@ class TaxesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool){
+        super .viewWillAppear(animated)
         lbRealResult.text = String(totalReal())
         lbDolarResult.text = String(totalDolar())
     }
- 
 
     func stateTaxValue(shoppingValue: Double, stateTax: Double) -> Double {
         return (shoppingValue * stateTax)/100

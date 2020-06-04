@@ -286,8 +286,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KI5-8q-AXo" userLabel="btAddState">
-                                <rect key="frame" x="363" y="430.5" width="35" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KI5-8q-AXo" userLabel="btAddState">
+                                <rect key="frame" x="363" y="423.5" width="35" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="DwI-5V-ZcU"/>
                                     <constraint firstAttribute="width" constant="35" id="Ydn-fT-Qnf"/>
@@ -305,16 +305,19 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Valor (U$)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ITu-Ma-H2x" userLabel="tfProductPrice">
-                                <rect key="frame" x="16" y="441.5" width="259" height="34"/>
+                                <rect key="frame" x="16" y="480" width="259" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xob-Ot-HBs" userLabel="swCreditCard">
-                                <rect key="frame" x="349" y="441.5" width="51" height="31"/>
+                                <rect key="frame" x="349" y="480" width="51" height="31"/>
                             </switch>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sey-bO-MC8" userLabel="btProductImage">
-                                <rect key="frame" x="20" y="154" width="374" height="221.5"/>
+                                <rect key="frame" x="20" y="154" width="374" height="260"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="QjU-YX-8aJ"/>
+                                </constraints>
                                 <state key="normal" title="Clique aqui para selecionar a imagem">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -323,13 +326,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cartão?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xx-71-tdL" userLabel="lbCardSwitch">
-                                <rect key="frame" x="280" y="447.5" width="64" height="22"/>
+                                <rect key="frame" x="280" y="486" width="64" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZb-pb-K9i" userLabel="btAddEditProduct">
-                                <rect key="frame" x="16" y="491.5" width="382" height="40"/>
+                                <rect key="frame" x="16" y="530" width="382" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="SCA-Ti-bOw"/>
@@ -341,20 +344,18 @@
                                     <action selector="addEditProduct:" destination="bFV-Cz-d0k" eventType="touchUpInside" id="Tbm-lr-wAh"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Estado da compra" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rY1-aj-MCB" userLabel="tfState">
-                                <rect key="frame" x="16" y="391.5" width="342" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Estado da compra" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rY1-aj-MCB" userLabel="tfState">
+                                <rect key="frame" x="16" y="423.5" width="342" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlightedImage="placeholder-image" translatesAutoresizingMaskIntoConstraints="NO" id="lzz-L2-sDx">
-                                <rect key="frame" x="19" y="154" width="379" height="260"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="260" id="EeJ-pX-SQp"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" highlightedImage="placeholder-image" translatesAutoresizingMaskIntoConstraints="NO" id="lzz-L2-sDx">
+                                <rect key="frame" x="20" y="146" width="374" height="260"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="lzz-L2-sDx" firstAttribute="height" secondItem="Sey-bO-MC8" secondAttribute="height" id="24v-Mj-uBx"/>
                             <constraint firstItem="tZb-pb-K9i" firstAttribute="top" secondItem="ITu-Ma-H2x" secondAttribute="bottom" constant="16" id="2d5-J2-V30"/>
                             <constraint firstItem="Ehy-io-IST" firstAttribute="trailing" secondItem="KI5-8q-AXo" secondAttribute="trailing" constant="16" id="7Ef-fj-FzR"/>
                             <constraint firstItem="lzz-L2-sDx" firstAttribute="width" secondItem="Sey-bO-MC8" secondAttribute="width" multiplier="1.0134" id="88c-dM-NRi"/>
@@ -378,7 +379,6 @@
                             <constraint firstItem="KI5-8q-AXo" firstAttribute="leading" secondItem="rY1-aj-MCB" secondAttribute="trailing" constant="5" id="sx1-NP-zfC"/>
                             <constraint firstItem="Ehy-io-IST" firstAttribute="trailing" secondItem="CAA-nM-psL" secondAttribute="trailing" constant="16" id="u77-T8-CyF"/>
                             <constraint firstItem="Ehy-io-IST" firstAttribute="trailing" secondItem="tZb-pb-K9i" secondAttribute="trailing" constant="16" id="uQ9-ZM-Qcf"/>
-                            <constraint firstItem="lzz-L2-sDx" firstAttribute="height" secondItem="Sey-bO-MC8" secondAttribute="height" multiplier="1.17489" id="vun-Ua-Xcj"/>
                             <constraint firstItem="lzz-L2-sDx" firstAttribute="top" secondItem="Sey-bO-MC8" secondAttribute="top" id="wdE-aM-5it"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ehy-io-IST"/>
@@ -396,7 +396,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eki-XJ-tvM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2622" y="856"/>
+            <point key="canvasLocation" x="2621.739130434783" y="855.80357142857144"/>
         </scene>
         <!--Total de compra-->
         <scene sceneID="6T5-VK-79H">
