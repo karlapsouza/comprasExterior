@@ -99,19 +99,27 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
                        }
         }
         alert.addAction(UIAlertAction(title: title, style: .default, handler: { (action) in
-            let state = state ?? State(context: self.context)
-            state.name = alert.textFields?.first?.text
-            state.tax = ((alert.textFields?.last?.text)! as NSString).doubleValue
-            do{
-                try self.context.save()
-                self.loadStates()
-            }catch{
-                print(error.localizedDescription)
+            if alert.textFields?.first?.text == "" {
+                alert.textFields?.first?.placeholder = "Nome do estado, campo obrigatório!"
+                self.present(alert, animated: true, completion: nil)
+            }else if alert.textFields?.last?.text == "" {
+                alert.textFields?.last?.placeholder = "Imposto, campo obrigatório!"
+                self.present(alert, animated: true, completion: nil)
+            }else{
+                let state = state ?? State(context: self.context)
+                state.name = alert.textFields?.first?.text
+                state.tax = ((alert.textFields?.last?.text)! as NSString).doubleValue
+                do{
+                    try self.context.save()
+                    self.loadStates()
+                }catch{
+                    print(error.localizedDescription)
+                }
             }
         }))
         alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
-        
+       
     }
     
     @IBAction func addState(_ sender: Any) {

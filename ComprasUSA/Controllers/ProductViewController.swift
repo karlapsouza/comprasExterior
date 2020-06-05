@@ -33,8 +33,6 @@ class ProductViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        btAddEditProduct.isEnabled = false
-//        [tfProductName, tfState, tfProductPrice].forEach({ $0.addTarget(self, action: #selector(editingChanged), for: .editingChanged) })
     }
     
     
@@ -129,40 +127,43 @@ class ProductViewController: UIViewController {
         present(imagePicker, animated: true, completion: nil)
     }
     
-    @IBAction func addEditProduct(_ sender: Any) {
-        if product == nil {
-            product = Product(context: context)
+    func validadeFields() -> Bool{
+        var tf = true
+        if tfProductName.text == "" {
+            tfProductName.placeholder = "Nome do produto, campo obrigatório!"
+            tf = false
         }
-//        if editingChanged([tfProductName, tfState, tfProductPrice]){
-//            btAddEditProduct.isEnabled = true
-//        }
-        product.productName = tfProductName.text
-        if !tfState.text!.isEmpty {
-            let state = statesManager.states[pickerView.selectedRow(inComponent: 0)]
-            product.state = state
-        }else{
-            
+        if tfState.text == "" {
+            tfState.placeholder = "Estado da compra, campo obrigatório!"
+            tf = false
         }
-        product.image = ivProductImage.image
-        product.price = Double(tfProductPrice.text!)!
-        product.useCreditCard = swCreditCard.isOn
-        do{
-            try context.save()
-        }catch{
-          print(error.localizedDescription)
+        if tfProductPrice.text == "" {
+            tfProductPrice.placeholder = "Valor (U$), campo obrigatório!"
+            tf = false
         }
-        navigationController?.popViewController(animated: true)
+        return tf
     }
     
-//    @objc func editingChanged(_ textsField: [UITextField]) -> Bool {
-//        var tf = true
-//        for textField in textsField{
-//            if textField.text?.count == 0 {
-//                tf = false
-//            }
-//        }
-//        return tf
-//    }
+    @IBAction func addEditProduct(_ sender: Any) {
+        if validadeFields(){
+            if product == nil {
+                product = Product(context: context)
+            }
+            product.productName = tfProductName.text
+            let state = statesManager.states[pickerView.selectedRow(inComponent: 0)]
+            product.state = state
+            product.image = ivProductImage.image
+            product.price = Double(tfProductPrice.text!)!
+            product.useCreditCard = swCreditCard.isOn
+            do{
+                try context.save()
+            }catch{
+              print(error.localizedDescription)
+            }
+            navigationController?.popViewController(animated: true)
+        }
+
+    }
     
     @IBAction func back(_ sender: Any) {
         dismiss(animated: true, completion: nil)
