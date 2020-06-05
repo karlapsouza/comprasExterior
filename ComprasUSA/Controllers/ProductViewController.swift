@@ -18,6 +18,7 @@ class ProductViewController: UIViewController {
     @IBOutlet weak var swCreditCard: UISwitch!
     @IBOutlet weak var btAddEditProduct: UIButton!
     
+    
     var product: Product!
     var state: State!
     var vcState: SettingsViewController!
@@ -35,6 +36,7 @@ class ProductViewController: UIViewController {
 //        btAddEditProduct.isEnabled = false
 //        [tfProductName, tfState, tfProductPrice].forEach({ $0.addTarget(self, action: #selector(editingChanged), for: .editingChanged) })
     }
+    
     
     override func viewWillAppear(_ animated: Bool){
         super .viewWillAppear(animated)
@@ -62,6 +64,11 @@ class ProductViewController: UIViewController {
         
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     @objc func cancel() {
         tfState.resignFirstResponder()
     }
@@ -79,6 +86,10 @@ class ProductViewController: UIViewController {
         
     }
     
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+            view.endEditing(true)
+    }
+    
     func prepareStateTextField(){
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 44))
         let btCancel = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
@@ -88,6 +99,7 @@ class ProductViewController: UIViewController {
         
         tfState.inputView = pickerView
         tfState.inputAccessoryView = toolbar
+        
     }
 
     
