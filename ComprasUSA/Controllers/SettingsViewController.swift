@@ -100,10 +100,20 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         alert.addAction(UIAlertAction(title: title, style: .default, handler: { (action) in
             if alert.textFields?.first?.text == "" {
-                alert.textFields?.first?.placeholder = "Nome do estado, campo obrigatório!"
+                alert.textFields?.first?.placeholder = "Nome do estado, obrigatório!"
+                alert.textFields?.first?.superview!.backgroundColor = #colorLiteral(red: 1, green: 0.9137254902, blue: 0.9058823529, alpha: 1)
+                alert.textFields?.last?.superview!.backgroundColor = .white
+                if alert.textFields?.last?.text == "" {
+                    alert.textFields?.last?.placeholder = "Imposto, obrigatório!"
+                    alert.textFields?.last?.superview!.backgroundColor = #colorLiteral(red: 1, green: 0.9137254902, blue: 0.9058823529, alpha: 1)
+                    alert.textFields?.last?.keyboardType = UIKeyboardType.decimalPad
+                }
                 self.present(alert, animated: true, completion: nil)
             }else if alert.textFields?.last?.text == "" {
-                alert.textFields?.last?.placeholder = "Imposto, campo obrigatório!"
+                alert.textFields?.last?.placeholder = "Imposto, obrigatório!"
+                alert.textFields?.last?.superview!.backgroundColor = #colorLiteral(red: 1, green: 0.9137254902, blue: 0.9058823529, alpha: 1)
+                alert.textFields?.first?.superview!.backgroundColor = .white
+                alert.textFields?.last?.keyboardType = UIKeyboardType.decimalPad
                 self.present(alert, animated: true, completion: nil)
             }else{
                 let state = state ?? State(context: self.context)
@@ -125,9 +135,6 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBAction func addState(_ sender: Any) {
         showAlert(with: nil)
     }
-    
-    
-    //Desabilitar botão: https://www.it-swarm.dev/pt/ios/ativar-um-botao-no-swift-somente-se-todos-os-campos-de-texto-tiverem-sido-preenchidos/822729121/
     
 }
 

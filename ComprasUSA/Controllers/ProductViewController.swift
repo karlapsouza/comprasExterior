@@ -20,7 +20,6 @@ class ProductViewController: UIViewController {
     
     
     var product: Product!
-    var state: State!
     let statesManager = StatesManager.shared
     
     lazy var pickerView: UIPickerView = {
@@ -37,6 +36,9 @@ class ProductViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool){
         super .viewWillAppear(animated)
+        
+        statesManager.loadStates(with: context)
+        prepareStateTextField()
         
         if(product != nil) {
             title = "Editar produto"
@@ -57,8 +59,6 @@ class ProductViewController: UIViewController {
             tfProductPrice.text = String(product.price)
             swCreditCard.isOn = product.useCreditCard
         }
-        statesManager.loadStates(with: context)
-        prepareStateTextField()
         
     }
     
@@ -72,12 +72,16 @@ class ProductViewController: UIViewController {
     }
     
     @objc func done() {
-        tfState.text = statesManager.states[pickerView.selectedRow(inComponent: 0)].name
+        if pickerView.numberOfRows(inComponent: 0) > 0{
+            tfState.text = statesManager.states[pickerView.selectedRow(inComponent: 0)].name
+        }else{
+            validadeFields()
+        }
         cancel()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "productSegue" || segue.identifier == "addProductSegue" {
+        if segue.identifier == "productSegue" {
             let vc = segue.destination as! ProductViewController
             vc.product = product
         }
@@ -129,16 +133,26 @@ class ProductViewController: UIViewController {
     
     func validadeFields() -> Bool{
         var tf = true
+        
         if tfProductName.text == "" {
-            tfProductName.placeholder = "Nome do produto, campo obrigatório!"
+            tfProductName.placeholder = "Nome do produto, obrigatório!"
+            tfProductName.layer.borderColor = UIColor.red.cgColor
+            tfProductName.layer.borderWidth = 1
+            tfProductName.layer.cornerRadius = 5
             tf = false
         }
         if tfState.text == "" {
-            tfState.placeholder = "Estado da compra, campo obrigatório!"
+            tfState.placeholder = "Estado da compra, obrigatório!"
+            tfState.layer.borderColor = UIColor.red.cgColor
+            tfState.layer.borderWidth = 1
+            tfState.layer.cornerRadius = 5
             tf = false
         }
         if tfProductPrice.text == "" {
-            tfProductPrice.placeholder = "Valor (U$), campo obrigatório!"
+            tfProductPrice.placeholder = "Valor (U$), obrigatório!"
+            tfProductPrice.layer.borderColor = UIColor.red.cgColor
+            tfProductPrice.layer.borderWidth = 1
+            tfProductPrice.layer.cornerRadius = 5
             tf = false
         }
         return tf
@@ -150,8 +164,8 @@ class ProductViewController: UIViewController {
                 product = Product(context: context)
             }
             product.productName = tfProductName.text
-            let state = statesManager.states[pickerView.selectedRow(inComponent: 0)]
-            product.state = state
+            let stateList = statesManager.states[pickerView.selectedRow(inComponent: 0)]
+            product.state = stateList
             product.image = ivProductImage.image
             product.price = Double(tfProductPrice.text!)!
             product.useCreditCard = swCreditCard.isOn
@@ -185,8 +199,8 @@ extension ProductViewController: UIPickerViewDelegate, UIPickerViewDataSource  {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let state = statesManager.states[row]
-        return state.name
+        let statePicker = statesManager.states[row]
+        return statePicker.name
     }
     
 }

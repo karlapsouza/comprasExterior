@@ -46,8 +46,8 @@
             filePath = "ComprasUSA/Controllers/ProductViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,25 +62,9 @@
             filePath = "ComprasUSA/Controllers/ShoppingTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "tableView(_:commit:forRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7BAC03BB-5E8E-4C6B-BD05-72D7C537D509"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ComprasUSA/Controllers/ProductViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -161,6 +145,194 @@
             startingLineNumber = "39"
             endingLineNumber = "39"
             landmarkName = "iofValue(shoppingValue:stateTax:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "69F866B4-D67A-436F-8851-ACE729DA8A86"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ComprasUSA/Controllers/ProductViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "addEditProduct(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "98FAF4DE-ECE3-4682-AA07-8B3D77672D12"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ComprasUSA/Controllers/ProductViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "addEditProduct(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "69A8CABD-12B2-41FE-8DE9-9A6FCC76CDD3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ComprasUSA/StatesManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "loadStates(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "85611823-868D-4A23-A902-8E41E7443CC5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ComprasUSA/Controllers/ShoppingTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2663CC62-D695-4933-932B-ACE8429350CC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ComprasUSA/Controllers/ProductViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "ProductViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "2663CC62-D695-4933-932B-ACE8429350CC - aa61498693e63573"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BrunaKarlaTatianeVictor.ProductViewController.product.getter : Swift.Optional&lt;BrunaKarlaTatianeVictor.Product&gt;"
+                  moduleName = "BrunaKarlaTatianeVictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karlapsouza/Projetos/ComprasUSA/ComprasUSA/Controllers/ProductViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  uuid = "2663CC62-D695-4933-932B-ACE8429350CC - 80ffa97a2cf97567"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BrunaKarlaTatianeVictor.ProductViewController.product.setter : Swift.Optional&lt;BrunaKarlaTatianeVictor.Product&gt;"
+                  moduleName = "BrunaKarlaTatianeVictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karlapsouza/Projetos/ComprasUSA/ComprasUSA/Controllers/ProductViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "2663CC62-D695-4933-932B-ACE8429350CC - ef3452c4a0d5f576"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BrunaKarlaTatianeVictor.ProductViewController.product.modify : Swift.Optional&lt;BrunaKarlaTatianeVictor.Product&gt;"
+                  moduleName = "BrunaKarlaTatianeVictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karlapsouza/Projetos/ComprasUSA/ComprasUSA/Controllers/ProductViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "2663CC62-D695-4933-932B-ACE8429350CC - aeefe5620f58450e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BrunaKarlaTatianeVictor.ProductViewController.product.modify : Swift.Optional&lt;BrunaKarlaTatianeVictor.Product&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "BrunaKarlaTatianeVictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karlapsouza/Projetos/ComprasUSA/ComprasUSA/Controllers/ProductViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "2663CC62-D695-4933-932B-ACE8429350CC - 4ef33813faae3854"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BrunaKarlaTatianeVictor.ProductViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; BrunaKarlaTatianeVictor.ProductViewController"
+                  moduleName = "BrunaKarlaTatianeVictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karlapsouza/Projetos/ComprasUSA/ComprasUSA/Controllers/ProductViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "1216">
+               </Location>
+               <Location
+                  uuid = "2663CC62-D695-4933-932B-ACE8429350CC - 63e3d059d7d24f96"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BrunaKarlaTatianeVictor.ProductViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;BrunaKarlaTatianeVictor.ProductViewController&gt;"
+                  moduleName = "BrunaKarlaTatianeVictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karlapsouza/Projetos/ComprasUSA/ComprasUSA/Controllers/ProductViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "1157">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "15C6E2C4-D085-4091-A4DE-AC3D16E94D45"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ComprasUSA/Controllers/ProductViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

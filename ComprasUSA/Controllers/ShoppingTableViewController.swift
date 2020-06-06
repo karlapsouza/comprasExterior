@@ -19,6 +19,11 @@ class ShoppingTableViewController: UITableViewController {
         super.viewDidLoad()
         label.text = "Sua lista está vazia!"
         label.textAlignment = .center
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         loadProducts()
     }
     
