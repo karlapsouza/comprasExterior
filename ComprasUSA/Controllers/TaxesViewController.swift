@@ -23,6 +23,7 @@ class TaxesViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    
     override func viewWillAppear(_ animated: Bool){
         super .viewWillAppear(animated)
         lbRealResult.text = String(totalReal())
@@ -58,7 +59,7 @@ class TaxesViewController: UIViewController {
             let stateTax = Double(p.state!.tax)
             valueListProduct += stateTaxValue(shoppingValue: p.price, stateTax: stateTax)
             if p.useCreditCard {
-                valueListProduct += iofValue(shoppingValue: valueListProduct, stateTax: stateTax)
+                valueListProduct += iofValue(shoppingValue: p.price, stateTax: stateTax)
             }
             valueListProduct += p.price
         }

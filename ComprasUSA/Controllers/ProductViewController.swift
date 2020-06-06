@@ -21,7 +21,6 @@ class ProductViewController: UIViewController {
     
     var product: Product!
     var state: State!
-    var vcState: SettingsViewController!
     let statesManager = StatesManager.shared
     
     lazy var pickerView: UIPickerView = {
@@ -56,6 +55,7 @@ class ProductViewController: UIViewController {
                 pickerView.selectRow(index, inComponent: 0, animated: true)
             }
             tfProductPrice.text = String(product.price)
+            swCreditCard.isOn = product.useCreditCard
         }
         statesManager.loadStates(with: context)
         prepareStateTextField()
